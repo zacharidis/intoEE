@@ -2,6 +2,8 @@ package entrypoint;
 
 
 import DTO.UserDTO;
+import Service.UsersService;
+import Service.impl.UsersServiceImpl;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -27,7 +29,7 @@ public class UsersEntryPoint {
         BeanUtils.copyProperties(requestObject ,userDto);
 
         //crete new user
-        UsersService usersService = new UserServiceImp();
+        UsersService usersService = new UsersServiceImpl();
        UserDTO createdUserProfile =  usersService.createUser(userDto);
 
         // prepare response
