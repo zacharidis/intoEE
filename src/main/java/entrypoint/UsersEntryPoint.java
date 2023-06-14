@@ -6,6 +6,8 @@ import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import model.CreateUserRequestModel;
+import model.UserProfileRest;
 
 @Path("/users")
 public class UsersEntryPoint {
@@ -14,7 +16,7 @@ public class UsersEntryPoint {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public UserProfileRest createUser(CreateUserRequestModel requestModel) {
+    public UserProfileRest createUser(CreateUserRequestModel requestObject) {
 
         UserProfileRest returnValue = new UserProfileRest();
         return returnValue;
