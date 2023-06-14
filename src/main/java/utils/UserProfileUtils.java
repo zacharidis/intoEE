@@ -13,7 +13,7 @@ public class UserProfileUtils {
             userDTO.getLastName() == null ||
             userDTO.getLastName().isEmpty()  ||
             userDTO.getEmail() ==null ||  userDTO.getEmail().isEmpty()) {
-            throw  new MissingRequiredFieldException(ErrorMessage.MISSING_REQUIRED_FIELD.getErrorMessage());
+           // throw  new MissingRequiredFieldException(ErrorMessage.MISSING_REQUIRED_FIELD.getErrorMessage());
         }
     }
 
